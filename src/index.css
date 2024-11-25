@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rbc-calendar {
+  @apply font-sans rounded-2xl bg-white shadow-lg p-6 border border-gray-100;
+}
+
+.rbc-toolbar {
+  @apply mb-6 flex flex-wrap gap-3 items-center;
+}
+
+.rbc-toolbar button {
+  @apply px-4 py-2 text-sm font-medium text-gray-600 bg-gray-50 rounded-lg border-0 shadow-sm transition-all hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-200;
+}
+
+.rbc-toolbar button.rbc-active {
+  @apply bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 shadow-inner;
+}
+
+.rbc-toolbar-label {
+  @apply text-lg font-semibold text-gray-900;
+}
+
+.rbc-header {
+  @apply py-3 font-medium text-gray-600 border-b border-gray-100;
+}
+
+.rbc-event {
+  @apply rounded-lg shadow-sm border-0 transition-transform hover:scale-[1.02] cursor-pointer;
+}
+
+.rbc-today {
+  @apply bg-blue-50/40;
+}
+
+.rbc-off-range-bg {
+  @apply bg-gray-50/50;
+}
+
+.rbc-time-slot {
+  @apply text-sm text-gray-600;
+}
+
+.rbc-time-header {
+  @apply rounded-t-lg;
+}
+
+.rbc-time-content {
+  @apply rounded-b-lg;
+}
+
+.rbc-time-view, .rbc-month-view {
+  @apply rounded-lg border border-gray-100;
+}
+
+.rbc-timeslot-group {
+  @apply border-gray-100;
+}
+
+.rbc-time-gutter .rbc-timeslot-group {
+  @apply border-r border-gray-100;
+}
+
+.rbc-day-slot .rbc-time-slot {
+  @apply border-gray-100;
+}
+
+.rbc-time-header-content {
+  @apply border-l border-gray-100;
+}
+
+.rbc-current-time-indicator {
+  @apply bg-blue-400;
+}
+
+@media (max-width: 640px) {
+  .rbc-toolbar {
+    @apply flex-col space-y-2;
+  }
+  
+  .rbc-toolbar-label {
+    @apply text-base my-2;
+  }
+}
